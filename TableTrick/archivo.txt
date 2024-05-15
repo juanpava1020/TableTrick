@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+.container-principal {
+    width: 100%;
+    height: calc(100vh - 60px); /* Ajusta según la altura del header */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 60px; /* Ajusta según la altura del header */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.num-mesas {
+    flex: 1;
+    /* Aquí puedes agregar estilos adicionales para el área vacía si lo deseas */
+}
+
+.reserva-container {
+    flex: 1;
+    max-width: 50%; /* Limita el ancho del formulario a la mitad de la pantalla */
+    margin-left: 20px; /* Asegura espacio desde el borde izquierdo */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-reserva {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+.reservation-form .form-group {
+    margin-bottom: 20px; /* Aumenta el espacio entre los campos */
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea,
+.reservation-form button {
+    width: calc(100% - 20px); /* Asegura espacio a los lados */
+    padding: 15px; /* Aumenta el padding interno */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 5px; /* Asegura espacio superior entre elementos */
+    margin-left: 10px; /* Espacio igual en ambos lados */
+    margin-right: 10px; /* Espacio igual en ambos lados */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.reservation-form input::placeholder,
+.reservation-form textarea::placeholder,
+.reservation-form select {
+    color: #555;
+    opacity: 0.8;
+}
+
+.reservation-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 1024px) {
+    .container-principal {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+    }
+
+    .reserva-container {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .reserva-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .reservation-form input,
+    .reservation-form select,
+    .reservation-form textarea,
+    .reservation-form button {
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

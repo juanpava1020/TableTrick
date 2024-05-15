@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Bookings.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookings</title>
+</head>
+<body>
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-primary">TableTrick</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="#id_restaurants" class="nav-item nav-link">Restaurants</a>
+                        <a href="#id_reservar" class="nav-item nav-link">Booking</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-principal">
+        <div class="num-mesas">
+          
+        </div>
+
+        <div class="container reserva-container">
+            <h1 class="titulo-reserva">Reserva Aquí</h1>
+            <form class="reservation-form">
+                <div class="form-group">
+                    <input type="time" id="hora" name="hora" required placeholder="Hora">
+                </div>
+                <div class="form-group">
+                    <input type="date" id="fecha" name="fecha" required placeholder="Fecha">
+                </div>
+                <div class="form-group">
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Tipo de reserva</option>
+                        <option value="cumpleaños">Cumpleaños</option>
+                        <option value="aniversario">Aniversario</option>
+                        <option value="evento-empresarial">Evento Empresarial</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="personas" name="personas" min="1" required placeholder="Cantidad de personas">
+                </div>
+                <div class="form-group">
+                    <textarea id="descripcion" name="descripcion" rows="4" placeholder="Añadir una descripción adicional"></textarea>
+                </div>
+                <div class="form-group">
+                    <select id="restaurante" name="restaurante" required>
+                        <option value="">Seleccione el restaurante</option>
+                        <option value="restaurante1">Restaurante 1</option>
+                        <option value="restaurante2">Restaurante 2</option>
+                        <option value="restaurante3">Restaurante 3</option>
+                    </select>
+                </div>
+                <button type="submit">Reservar</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/Booking.js"></script>
+</body>
+</html>
